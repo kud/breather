@@ -1,12 +1,12 @@
 var notifier = require( 'node-notifier' )
   , ProgressBar = require('progress')
 
-console.log('\n=> Working time! 👷\n')
+console.log('\n> Working time! 👷\n')
 
 var bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
     total: 60
   , width: 20
-  , complete: '='
+  , complete: '●'
   , incomplete: ' '
 })
 
