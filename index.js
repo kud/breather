@@ -5,7 +5,7 @@ console.log('\n> Working time! 👷\n')
 
 var bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
     total: 60
-  , width: 20
+  , width: 30
   , complete: '●'
   , incomplete: ' '
 })
@@ -21,7 +21,8 @@ var timer = setInterval(function(){
     })
     clearInterval( timer )
   }
-
-  bar.tick()
+  else {
+    bar.tick()
+  }
 
 }, 60 * 1000)
