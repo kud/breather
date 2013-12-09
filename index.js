@@ -1,10 +1,16 @@
 var notifier = require( 'node-notifier' )
+  , args = process.argv.slice(2)
+  , minutes = 60
 
-var time = 60 * 60 * 1000
+if(args.length) {
+  minutes = parseFloat(args[0])
+}
+
+var time = minutes * 60 * 1000
 
 setTimeout( function() {
   notifier.notify({
     title: 'Break! Break! Break!',
-    message: 'Time to take a break, mate. Take a cup of tea and relax. 🍵'
+    message: 'Time to take a break, mate. \nTake a cup of tea and relax. 🍵'
   })
 }, time )
