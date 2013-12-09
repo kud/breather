@@ -1,4 +1,4 @@
-# Break! Break! Break!
+# Break! Break! Break! 🍵
 
 A break taker, like Kitkat but better.
 
