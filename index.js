@@ -1,10 +1,14 @@
 var notifier = require( 'node-notifier' )
   , ProgressBar = require('progress')
-
+  , bar
+  , timer
+  , start = +new Date()
+  , minutes = 60
+  , end = start + (minutes * 60 * 1000)
 console.log('\n> Working time! 👷\n')
 
-var bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
-    total: 60
+bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
+    total: minutes
   , width: 30
   , complete: '●'
   , incomplete: ' '
@@ -12,17 +16,18 @@ var bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
 
 bar.tick(0)
 
-var timer = setInterval(function(){
+timer = setTimeout(fn, 60 * 1000)
 
-  if ( bar.complete ) {
+function fn(){
+  if ( +new Date() >= end ) {
     notifier.notify({
       title: 'Break! Break! Break!',
       message: 'Time to take a break, mate. Take a cup of tea and relax. 🍵'
     })
-    clearInterval( timer )
+    return
   }
-  else {
-    bar.tick()
-  }
+  
+  bar.tick()
 
-}, 60 * 1000)
+  setTimeout(fn, 60 * 1000)
+}
