@@ -3,4 +3,4 @@ install:
 
 start:
 	@ echo "Started!"
-	@ node index.js
+	@ node index.js $(T)
