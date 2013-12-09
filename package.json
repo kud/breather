@@ -9,6 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "node-notifier": "~1.0.0-beta"
+    "node-notifier": "~1.0.0-beta",
+    "progress": "~1.1.2"
   }
 }
