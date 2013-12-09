@@ -1,15 +1,27 @@
 {
-  "name": "break-break-BREAK!",
-  "version": "0.0.0",
-  "description": "",
+  "name": "breather",
+  "version": "0.1.0",
+  "description": "A breath taker.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "devDependencies": {
+  "dependencies": {
     "node-notifier": "~1.0.0-beta",
     "progress": "~1.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kud/breather.git"
+  },
+  "keywords": [
+    "breath",
+    "cup of tea",
+    "time breaker",
+    "break time",
+    "breath time"
+  ],
+  "author": "Erwann Mest",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kud/breather/issues"
+  },
+  "homepage": "https://github.com/kud/breather"
 }
