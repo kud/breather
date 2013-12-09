@@ -2,6 +2,8 @@
 
 A break taker, like Kitkat but better.
 
+<img src="https://raw.github.com/kud/break-break-break/master/preview.jpg">
+
 ## Install
 
 ```
