@@ -1,6 +1,8 @@
-# Breather! 🍵
+# Breather!
 
-A break taker, like Kitkat but better.
+<img src="https://raw.github.com/kud/break-break-break/master/icon.png"> _A break taker, like Kitkat but better._
+
+## Preview
 
 <img src="https://raw.github.com/kud/break-break-break/master/preview-cli.png">
 
@@ -37,3 +39,7 @@ You also can specify some pre-tasks and post-tasks via ```pre.js``` and ```post.
 ```
 $ make start
 ```
+
+## Credits
+
+- Icon: Tea by <a href="http://thenounproject.com/jacob/">Jacob Halton</a> from The <a href="http://thenounproject.com/">Noun Project</a>
