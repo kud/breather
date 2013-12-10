@@ -1,2 +1,4 @@
 node_modules/
 settings.json
+post.js
+pre.js

@@ -10,6 +10,8 @@ var notifier = require("node-notifier")
   , weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q="
   , parseWeather = require("./lib/parse-weather.js")
   , i18n = require("./i18n/" + (settings.lang || "en"))
+  , pre = require("./pre.js")
+  , post = require("./post.js")
 
 // variables
 var duration = parseFloat( settings.duration ) // in minute
@@ -35,6 +37,8 @@ bar = new ProgressBar(i18n.progressBar, {
 
 bar.tick( 0 )
 
+pre()
+
 // clock
 setTimeout( clock, 1000 )
 
@@ -42,6 +46,8 @@ function clock() {
   bar.update()
 
   if ( !bar.complete ) return setTimeout( clock, 1000 )
+
+  post()
 
   notifier.notify({
     title: i18n.title,
