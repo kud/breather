@@ -1,2 +1,4 @@
 node_modules/
-settings.json
+config/settings.json
+tasks/post.js
+tasks/pre.js

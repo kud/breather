@@ -28,9 +28,12 @@ $ make install
 }
 ```
 
+### (pre|post) tasks
+
+You also can specify some pre-tasks and post-tasks via ```pre.js``` and ```post.js```. By default, it hides and shows Twitter and Limechat.
+
 ## Usage
 
 ```
 $ make start
 ```
-

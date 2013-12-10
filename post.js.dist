@@ -1,0 +1,9 @@
+module.exports = function( ) {
+  // var applescript = require("applescript")
+
+  // var twitter = 'tell application "Finder" to set visible of process "Twitter" to true'
+  // , limechat = 'tell application "Finder" to set visible of process "LimeChat" to true'
+
+  // applescript.execString( twitter, function(err, rtn) {} )
+  // applescript.execString( limechat, function(err, rtn) {} )
+}
