@@ -8,9 +8,8 @@ var notifier = require( 'node-notifier' )
   , settings = require('./settings.json')
 
 // variables
-var  duration = settings.duration // in minute
+var duration = settings.duration // in minute
   , bar
-  , clock
   , title = 'Breather'
   , message = 'Time to take a breath. Take a cup of tea and relax. 😌'
 
@@ -26,7 +25,7 @@ console.log("\n...but it's time to work for the moment. 👷\n")
 
 // init bar
 bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
-    total: 60 * duration
+    total: duration * 60
   , width: 30
   , complete: '●'
   , incomplete: ' '
@@ -35,16 +34,17 @@ bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
 bar.tick(0)
 
 // clock
-clock = setInterval(function(){
+setTimeout(clock, 1000)
+
+function clock(){
   bar.update()
 
-  if ( bar.complete ) {
-    notifier.notify({
-      title: title,
-      message: message
-    })
-    console.log('\n>' + message)
-    clearInterval( clock )
-  }
+  if ( !bar.complete ) return setTimeout(clock, 1000)
+  
+  notifier.notify({
+    title: title,
+    message: message
+  })
 
-}, 1000)
+  console.log('\n>' + message)
+}
