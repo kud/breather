@@ -11,6 +11,10 @@ A break taker, like Kitkat but better.
 ## Install
 
 ```
+$ git clone git@github.com:kud/breather.git
+```
+
+```
 $ make install
 ```
 
