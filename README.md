@@ -1,10 +1,12 @@
-# Break! Break! Break! 🍵
+# Breather! 🍵
 
 A break taker, like Kitkat but better.
 
 <img src="https://raw.github.com/kud/break-break-break/master/preview-cli.png">
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier.jpg">
+<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier.png">
+
+<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier2.png">
 
 ## Install
 
@@ -12,10 +14,19 @@ A break taker, like Kitkat but better.
 $ make install
 ```
 
-## Usage
+## Settings
 
-_(By default, the notification will come after 1 hour.)_
+```javascript
+{
+  "duration": "25", // duration of a session
+  "location": "Paris,fr", // where you are
+  "lang": "en" // language
+}
+```
+
+## Usage
 
 ```
 $ make start
 ```
+
