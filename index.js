@@ -3,48 +3,77 @@
  */
 
 // import
-var notifier = require( 'node-notifier' )
-  , ProgressBar = require('progress')
-  , settings = require('./settings.json')
+var notifier = require("node-notifier")
+  , ProgressBar = require("progress")
+  , http = require("http")
+  , settings = require("./settings.json")
+  , weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q="
+  , parseWeather = require("./lib/parse-weather.js")
+  , i18n = require("./i18n/" + (settings.lang || "en"))
 
 // variables
-var duration = settings.duration // in minute
+var duration = parseFloat( settings.duration ) // in minute
   , bar
-  , title = 'Breather'
-  , message = 'Time to take a breath. Take a cup of tea and relax. 😌'
 
 // display
-console.log('\n' + new Date())
+console.log("\n" + new Date())
 console.log("  ____                 _   _               ")
 console.log(" | __ ) _ __ ___  __ _| |_| |__   ___ _ __ ")
 console.log(" |  _ \\| '__/ _ \\/ _` | __| '_ \\ / _ \\ '__|")
 console.log(" | |_) | | |  __/ (_| | |_| | | |  __/ |   ")
 console.log(" |____/|_|  \\___|\\__,_|\\__|_| |_|\\___|_|   ")
 
-console.log("\n...but it's time to work for the moment. 👷\n")
+console.log("\n..." + i18n.workMessage + "\n")
 
 // init bar
-bar = new ProgressBar('Time remaining before break: [:bar] :percent', {
+bar = new ProgressBar(i18n.progressBar, {
     total: duration * 60
   , width: 30
-  , complete: '●'
-  , incomplete: ' '
+  , complete: "●"
+  , incomplete: " "
 })
 
-bar.tick(0)
+bar.tick( 0 )
 
 // clock
-setTimeout(clock, 1000)
+setTimeout( clock, 1000 )
 
-function clock(){
+function clock() {
   bar.update()
 
-  if ( !bar.complete ) return setTimeout(clock, 1000)
-  
+  if ( !bar.complete ) return setTimeout( clock, 1000 )
+
   notifier.notify({
-    title: title,
-    message: message
+    title: i18n.title,
+    message: i18n.breakNotification
   })
 
-  console.log('\n>' + message)
+  if( settings.location ) {
+    checkWeather()
+  }
+
+  console.log("\n> " + i18n.breakNotification)
+}
+
+// weather
+function checkWeather(){
+  http.get(weatherAPI + settings.location, function( response ) {
+    var json = ""
+    response.on("data", function( c ) {
+      json += c
+    })
+    response.on("end", function() {
+      setTimeout(function() {
+        var messsage = parseWeather( JSON.parse( json ) )
+
+        notifier.notify({
+          title : i18n.title,
+          message : messsage
+        })
+
+        console.log("\n> " + messsage)
+
+      }, 6000)
+    })
+  })
 }
