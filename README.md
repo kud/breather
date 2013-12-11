@@ -34,6 +34,8 @@ $ make install
 
 You also can specify some pre-tasks and post-tasks via ```pre.js``` and ```post.js```. By default, it hides and shows Twitter and Limechat.
 
+> AppleScript in GNU/Linux [What are the alternative(s) to applescript in Linux ?](http://stackoverflow.com/questions/7642299/what-are-the-alternatives-to-applescript-in-linux-how-are-they-different)
+
 ## Usage
 
 ```
