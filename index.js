@@ -3,15 +3,15 @@
  */
 
 // import
-var notifier = require("node-notifier")
-  , ProgressBar = require("progress")
+var ProgressBar = require("progress")
   , http = require("http")
-  , settings = require("./settings.json")
+  , settings = require("./config/settings.json")
   , weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q="
   , parseWeather = require("./lib/parse-weather.js")
   , i18n = require("./i18n/" + (settings.lang || "en"))
-  , pre = require("./pre.js")
-  , post = require("./post.js")
+  , pre = require("./tasks/pre.js")
+  , post = require("./tasks/post.js")
+  , growl = require('growl')
 
 // variables
 var duration = parseFloat( settings.duration ) // in minute
@@ -49,10 +49,7 @@ function clock() {
 
   post()
 
-  notifier.notify({
-    title: i18n.title,
-    message: i18n.breakNotification
-  })
+  growl( i18n.breakNotification, {title : i18n.title})
 
   if( settings.location ) {
     checkWeather()
@@ -70,14 +67,11 @@ function checkWeather(){
     })
     response.on("end", function() {
       setTimeout(function() {
-        var messsage = parseWeather( JSON.parse( json ) )
+        var message = parseWeather( JSON.parse( json ) )
 
-        notifier.notify({
-          title : i18n.title,
-          message : messsage
-        })
+        growl( message, {title : i18n.title})
 
-        console.log("\n> " + messsage)
+        console.log("\n> " + message)
 
       }, 6000)
     })

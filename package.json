@@ -1,11 +1,11 @@
 {
   "name": "breather",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A breath taker.",
   "main": "index.js",
   "dependencies": {
-    "node-notifier": "~1.0.0-beta",
-    "progress": "~1.1.2"
+    "progress": "~1.1.2",
+    "growl": "~1.7.0"
   },
   "repository": {
     "type": "git",
