@@ -1,6 +1,6 @@
 {
   "name": "breather",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A breath taker.",
   "main": "index.js",
   "dependencies": {

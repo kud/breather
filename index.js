@@ -5,13 +5,13 @@
 // import
 var ProgressBar = require("progress")
   , http = require("http")
-  , settings = require("./settings.json")
+  , settings = require("./config/settings.json")
   , weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q="
   , parseWeather = require("./lib/parse-weather.js")
   , i18n = require("./i18n/" + (settings.lang || "en"))
-  , pre = require("./pre.js")
-  , post = require("./post.js")
   , growl = require('growl')
+  , pre = require("./tasks/pre.js")
+  , post = require("./tasks/post.js")
 
 // variables
 var duration = parseFloat( settings.duration ) // in minute

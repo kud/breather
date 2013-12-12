@@ -1,14 +1,14 @@
 # Breather!
 
-<img src="https://raw.github.com/kud/break-break-break/master/icon.png"> _A break taker, like Kitkat but better._
+<img src="https://raw.github.com/kud/breather/master/resources/icon.png"> _A break taker, like Kitkat but better._
 
 ## Preview
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-cli.png">
+<img src="https://raw.github.com/kud/breather/master/resources/preview-cli.png">
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier.png">
+<img src="https://raw.github.com/kud/breather/master/resources/preview-notifier.png">
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier2.png">
+<img src="https://raw.github.com/kud/breather/master/resources/preview-notifier2.png">
 
 ## Install
 
@@ -24,7 +24,7 @@ $ make install
 
 ```javascript
 {
-  "duration": "25", // duration of a session
+  "duration": "25", // duration of a session. in minutes, if you want less than a minute, use float like 0.5
   "location": "Paris,fr", // where you are
   "lang": "en" // language
 }
@@ -32,7 +32,9 @@ $ make install
 
 ### (pre|post) tasks
 
-You also can specify some pre-tasks and post-tasks via ```pre.js``` and ```post.js```. By default, it hides and shows Twitter and Limechat.
+You also can specify some pre-tasks and post-tasks via ```pre.js``` and ```post.js```.
+
+An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 
 > AppleScript in GNU/Linux [What are the alternative(s) to applescript in Linux ?](http://stackoverflow.com/questions/7642299/what-are-the-alternatives-to-applescript-in-linux-how-are-they-different)
 
