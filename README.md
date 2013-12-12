@@ -1,14 +1,14 @@
 # Breather!
 
-<img src="https://raw.github.com/kud/break-break-break/master/icon.png"> _A break taker, like Kitkat but better._
+<img src="https://raw.github.com/kud/breather/master/resources/icon.png"> _A break taker, like Kitkat but better._
 
 ## Preview
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-cli.png">
+<img src="https://raw.github.com/kud/breather/master/resources/preview-cli.png">
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier.png">
+<img src="https://raw.github.com/kud/breather/master/resources/preview-notifier.png">
 
-<img src="https://raw.github.com/kud/break-break-break/master/preview-notifier2.png">
+<img src="https://raw.github.com/kud/breather/master/resources/preview-notifier2.png">
 
 ## Install
 

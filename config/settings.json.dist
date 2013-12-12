@@ -1,0 +1,5 @@
+{
+  "duration": "25", // in minutes, if you want less than a minute, use float like 0.5
+  "location": "Paris,fr",
+  "lang": "en"
+}
