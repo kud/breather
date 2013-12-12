@@ -69,7 +69,7 @@ function checkWeather(){
       setTimeout(function() {
         var messsage = parseWeather( JSON.parse( json ) )
 
-        growl( message, {title : i18n.title})
+        growl( messsage, {title : i18n.title})
 
         console.log("\n> " + messsage)
 
