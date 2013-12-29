@@ -10,8 +10,9 @@ var ProgressBar = require("progress")
   , i18n = require("./i18n/" + ( settings.lang || "en" ) )
   , pre = require("./tasks/pre.js")
   , post = require("./tasks/post.js")
-  , growl = require('growl')
-  , readline = require('readline')
+  , growl = require("growl")
+  , readline = require("readline")
+  , fs = require("fs")
 
 // functions
 // weather
@@ -44,9 +45,9 @@ function clock() {
 
   growl( i18n.breakNotification, {title : i18n.title} )
 
-  if( settings.location ) {
-    checkWeather()
-  }
+  // if( settings.location ) {
+  //   checkWeather()
+  // }
 
   console.log("\n> " + i18n.breakNotification)
 
@@ -55,7 +56,17 @@ function clock() {
     output: process.stdout
   })
 
-  rl.question("\n" + i18n.anotherSessionQuestion + " (Y/n) ", function( answer ) {
+  rl.question("\n" + i18n.anotherSessionQuestion + " (Y/time/n) ", function( answer ) {
+    var intAnswer = parseInt( answer, 10 )
+
+    if ( !isNaN( intAnswer ) ) {
+      settings.duration = intAnswer
+
+      fs.writeFile("./config/settings.json", JSON.stringify( settings, null, 2 ), function ( err ) {
+        if (err) throw err
+      })
+    }
+
     if ( answer !== "n" && answer !== "N" ) {
       programme()
     }
@@ -82,6 +93,8 @@ function intro() {
 
 // programme
 function programme() {
+  duration = parseFloat( settings.duration )
+
   // init bar
   bar = new ProgressBar(i18n.progressBar, {
       total: duration * 60
@@ -102,7 +115,7 @@ function programme() {
 }
 
 // variables
-var duration = parseFloat( settings.duration ) // in minute
+var duration
   , bar
   , rl
 
