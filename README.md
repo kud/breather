@@ -12,6 +12,14 @@
 
 ## Install
 
+### Via npm
+
+```
+$ npm install breather -g
+```
+
+### Via git
+
 ```
 $ git clone git@github.com:kud/breather.git
 ```
@@ -39,6 +47,14 @@ An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 > AppleScript in GNU/Linux: [What are the alternative(s) to applescript in Linux?](http://stackoverflow.com/questions/7642299/what-are-the-alternatives-to-applescript-in-linux-how-are-they-different)
 
 ## Usage
+
+### Via npm
+
+```
+$ breather
+```
+
+### Via git
 
 ```
 $ make start
