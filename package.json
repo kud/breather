@@ -1,11 +1,18 @@
 {
   "name": "breather",
-  "version": "0.2.6",
-  "description": "A breath taker.",
+  "version": "0.3.0",
+  "description": "Pushing you to take a breath.",
   "main": "index.js",
+  "bin": {
+    "breather": "./bin/breather"
+  },
+  "scripts": {
+    "postinstall": "make installvianpm"
+  },
   "dependencies": {
     "progress": "~1.1.2",
-    "growl": "~1.7.0"
+    "growl": "~1.7.0",
+    "applescript": "~0.2.1"
   },
   "repository": {
     "type": "git",
@@ -23,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/kud/breather/issues"
   },
-  "homepage": "https://github.com/kud/breather",
-  "devDependencies": {
-    "applescript": "~0.2.1"
-  }
+  "homepage": "https://github.com/kud/breather"
 }
