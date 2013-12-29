@@ -3,6 +3,8 @@ module.exports = {
   workMessage : "but it's time to work for the moment. 👷",
   breakNotification : "Time to take a breath. Take a cup of tea and relax. 😌",
   progressBar : "Time remaining before break: [:bar] :percent",
+  anotherSessionQuestion : "Do you want to start another session?",
+  byeBye : "Have a good day! 😄",
   weather : {
     temperature : {
       "-50" : "Just look at the window, it's fucking cold out there. ⛄️",
