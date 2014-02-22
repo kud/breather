@@ -44,6 +44,11 @@ An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 $ breather
 ```
 
+## Changelog
+
+- 0.4.1 : You can now use `~/.breather` as configuration file.
+- 0.1.0 : First version.
+
 ## Credits
 
 - Icon: Tea by <a href="http://thenounproject.com/jacob/">Jacob Halton</a> from The <a href="http://thenounproject.com/">Noun Project</a>
