@@ -12,23 +12,15 @@
 
 ## Install
 
-### Via npm
-
 ```
 $ npm install breather -g
 ```
 
-### Via git
-
-```
-$ git clone git@github.com:kud/breather.git
-```
-
-```
-$ make install
-```
-
 ## Settings
+
+All settings are configured in `~/.breather`.
+
+### Core
 
 ```javascript
 {
@@ -40,7 +32,7 @@ $ make install
 
 ### (pre|post) tasks
 
-You also can specify some pre-tasks and post-tasks via ```pre.js``` and ```post.js```.
+You also can specify some pre-tasks and post-tasks.
 
 An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 
@@ -48,16 +40,8 @@ An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 
 ## Usage
 
-### Via npm
-
 ```
 $ breather
-```
-
-### Via git
-
-```
-$ make start
 ```
 
 ## Credits
