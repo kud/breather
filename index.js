@@ -4,15 +4,16 @@
 // import
 var ProgressBar = require("progress")
   , http = require("http")
-  , settings = require("./config/settings.json")
+  , fs = require("fs")
+  , growl = require("growl")
+  , readline = require("readline")
+  , globalSettings = require(process.env.HOME + "/.breather")
+  , settings = globalSettings.settings
+  , pre = globalSettings.pre
+  , post = globalSettings.post
   , weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q="
   , parseWeather = require("./lib/parse-weather.js")
   , i18n = require("./i18n/" + ( settings.lang || "en" ) )
-  , pre = require("./tasks/pre.js")
-  , post = require("./tasks/post.js")
-  , growl = require("growl")
-  , readline = require("readline")
-  , fs = require("fs")
 
 // functions
 // weather

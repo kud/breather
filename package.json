@@ -1,13 +1,13 @@
 {
   "name": "breather",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Pushing you to take a breath.",
   "main": "index.js",
   "bin": {
     "breather": "./bin/breather"
   },
   "scripts": {
-    "postinstall": "make installvianpm"
+    "postinstall": "./install.sh"
   },
   "dependencies": {
     "progress": "~1.1.2",
