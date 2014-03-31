@@ -50,7 +50,8 @@ Two pieces of advice to give your eyes a rest.
 
 #### F.lux
 
-Install [f.lux](http://justgetflux.com/) _"F.lux makes the colour of your computer's display adapt to the time of day, warm at night and like sunlight during the day."_
+Install [f.lux](http://justgetflux.com/)
+_"F.lux makes the colour of your computer's display adapt to the time of day, warm at night and like sunlight during the day."_
 
 ```
 $ brew cask install flux
