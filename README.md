@@ -46,7 +46,7 @@ $ breather
 
 ## Advices
 
-Two advices to give your eyes a rest.
+Two pieces of advice to give your eyes a rest.
 
 #### F.lux
 
