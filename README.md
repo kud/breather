@@ -44,6 +44,24 @@ An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 $ breather
 ```
 
+## Advices
+
+Two advices to give your eyes a rest.
+
+#### F.lux
+
+Install [f.lux](http://justgetflux.com/) _"F.lux makes the colour of your computer's display adapt to the time of day, warm at night and like sunlight during the day."_
+
+```
+$ brew cask install flux
+```
+
+
+#### 20/20/20
+
+Every 20 minutes, watch a 20-meters-from-you thing (like the coffee machine) during 20 secondes.
+
+
 ## Changelog
 
 - 0.4.1 : You can now use `~/.breather` as configuration file.
