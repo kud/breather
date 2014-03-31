@@ -44,7 +44,7 @@ An example is given, it hides and shows Twitter and Limechat on Mac OS X.
 $ breather
 ```
 
-## Advices
+## Advice
 
 Two pieces of advice to give your eyes a rest.
 
@@ -61,7 +61,7 @@ $ brew cask install flux
 
 #### 20/20/20
 
-Every 20 minutes, watch a 20-meters-from-you thing (like the coffee machine) during 20 secondes.
+Every 20 minutes, watch a thing that is at least 20 metres away from you (like the coffee machine) during 20 secondes.
 
 
 ## Changelog
