@@ -1,6 +1,6 @@
 {
   "name": "breather",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Pushing you to take a breath.",
   "main": "index.js",
   "bin": {
@@ -10,9 +10,9 @@
     "postinstall": "./install.sh"
   },
   "dependencies": {
-    "progress": "~1.1.2",
-    "growl": "~1.7.0",
-    "applescript": "~0.2.1"
+    "progress": "^1.1.5",
+    "growl": "^1.7.0",
+    "applescript": "^0.2.1"
   },
   "repository": {
     "type": "git",
