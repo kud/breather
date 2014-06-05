@@ -64,6 +64,8 @@ $ brew cask install flux
 Every 20 minutes, watch a thing that is at least 20 metres away from you (like the coffee machine) during 20 secondes.
 
 
+More informations on "[7 things you can do right now to protect your vision](http://thenextweb.com/lifehacks/2014/04/23/7-things-can-right-now-protect-vision/)".
+
 ## Changelog
 
 - 0.4.1 : You can now use `~/.breather` as configuration file.
