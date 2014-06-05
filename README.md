@@ -46,17 +46,23 @@ $ breather
 
 ## Advice
 
-Two pieces of advice to give your eyes a rest.
+Some pieces of advice to give your eyes a rest.
 
 #### F.lux
 
-Install [f.lux](http://justgetflux.com/)
+Install [f.lux](http://justgetflux.com/) on your desktop (Windows, MacOSX, Linux) and iOS device.
 
-_"F.lux makes the colour of your computer's display adapt to the time of day, warm at night and like sunlight during the day."_
+> F.lux makes the colour of your computer's display adapt to the time of day, warm at night and like sunlight during the day.
 
 ```
 $ brew cask install flux
 ```
+
+#### Twilight
+
+Install [Twilight](https://play.google.com/store/apps/details?id=com.urbandroid.lux) on your Android.
+
+> The Twilight app makes your device screen adapt to the time of the day. It filters the blue spectrum on your phone or tablet after sunset and protects your eyes with a soft and pleasant red filter. The filter intensity is smoothly adjusted to the sun cycle based on your local sunset and sunrise times.
 
 
 #### 20/20/20
