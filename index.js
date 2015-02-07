@@ -1,19 +1,17 @@
-/**
- * Breather
- */
 // import
-var ProgressBar = require("progress")
-  , http = require("http")
-  , fs = require("fs")
-  , growl = require("growl")
-  , readline = require("readline")
-  , globalSettings = require(process.env.HOME + "/.breather")
-  , settings = globalSettings.settings
-  , pre = globalSettings.pre
-  , post = globalSettings.post
-  , weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q="
-  , parseWeather = require("./lib/parse-weather.js")
-  , i18n = require("./i18n/" + ( settings.lang || "en" ) )
+var ProgressBar    = require("progress")
+var http           = require("http")
+var fs             = require("fs")
+var readline       = require("readline")
+var globalSettings = require(process.env.HOME + "/.breather")
+var settings       = globalSettings.settings
+var pre            = globalSettings.pre
+var post           = globalSettings.post
+var weatherAPI     = "http://api.openweathermap.org/data/2.5/weather?q="
+var parseWeather   = require("./lib/parse-weather.js")
+var i18n           = require("./i18n/" + ( settings.lang || "en" ) )
+var notifier       = require('node-notifier')
+var path           = require('path')
 
 // functions
 // weather
@@ -27,7 +25,11 @@ function checkWeather() {
       setTimeout(function() {
         var message = parseWeather( JSON.parse( json ) )
 
-        growl( message, {title : i18n.title} )
+        notifier.notify({
+          title: i18n.title,
+          message: message,
+          icon: path.join(__dirname, '../resources/icon.png')
+        })
 
         console.log("\n> " + message)
 
@@ -44,7 +46,11 @@ function clock() {
 
   post()
 
-  growl( i18n.breakNotification, {title : i18n.title} )
+  notifier.notify({
+    title: i18n.title,
+    message: i18n.breakNotification,
+    icon: path.join(__dirname, '../resources/icon.png')
+  })
 
   // if( settings.location ) {
   //   checkWeather()

@@ -12,6 +12,7 @@ module.exports.pre = function() {
 
   // applescript.execString( twitter, function(err, rtn) {} )
   // applescript.execString( limechat, function(err, rtn) {} )
+  // applescript.execString( 'display dialog "Time to take a break!" with title "Breather" with icon caution buttons {"Continue…"}', function(err, rtn) {} )
 }
 
 module.exports.post = function() {
