@@ -1,6 +1,6 @@
 {
   "name": "breather",
-  "version": "0.4.2",
+  "version": "0.9.0",
   "description": "Pushing you to take a breath.",
   "main": "index.js",
   "bin": {
